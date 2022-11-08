@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Button } from '@fluentui/react-components'
 import MaterialTable, { Column } from "@material-table/core";
+import { Analytics } from '@vercel/analytics/react';
 
 interface IPerson {
   firstName: string;
@@ -35,6 +36,7 @@ function App() {
     <div className="App">
       <MaterialTable columns={columns} data={data} />
       <Button appearance="primary" onClick={sayHello}>Fluently yours</Button>
+      <Analytics />
     </div>
   )
 }
