@@ -24,13 +24,17 @@ const data: Array<IPerson> = [
   { firstName: "Jess", lastName: "Smith", birthYear: 2000, availability: false }
 ];
 
+function sayHello() {
+  console.info("Hello");
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
       <MaterialTable columns={columns} data={data} />
-      <Button appearance="primary">Fluently yours</Button>
+      <Button appearance="primary" onClick={sayHello}>Fluently yours</Button>
     </div>
   )
 }
