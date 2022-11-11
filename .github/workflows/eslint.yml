@@ -7,11 +7,13 @@
 # More details at https://github.com/eslint/eslint
 # and https://eslint.org
 
-name: 'ESLint'
+name: ESLint
 
 on:
-  push
-  pull_request
+  push:
+    branches: [ "development" ]
+  pull_request:
+    branches: [ "development" ]
   schedule:
     - cron: '37 11 * * *'
 
