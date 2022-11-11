@@ -29,11 +29,22 @@ function sayHello() {
   console.info("Hello");
 }
 
+function renderGreeting(name: string, language: "English" | "Spanish"): string {
+  if (language === "English") {
+    return "Hello, ${name}";
+  }
+  if (language == "Spanish") {
+    return "Hola, ${name}";
+  }
+  return "";
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
+      <p>renderGreeting("Carlos", "Spanish")</p>
       <MaterialTable columns={columns} data={data} />
       <Button appearance="primary" onClick={sayHello}>Fluently yours</Button>
       <Analytics />
